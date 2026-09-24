@@ -83,7 +83,6 @@ dependencies {
 
   // Coroutines
   implementation(libs.kotlinx.coroutines.android)
-  implementation(libs.kotlinx.coroutines.core)
 
   // Base locale (à retirer si vous n'utilisez pas Room)
   implementation(libs.androidx.room.ktx)
@@ -106,4 +105,5 @@ dependencies {
   androidTestImplementation(libs.androidx.runner)
   debugImplementation(libs.androidx.compose.ui.tooling)
   debugImplementation(libs.androidx.compose.ui.test.manifest)
+  implementation(project(":shared"))
 }
