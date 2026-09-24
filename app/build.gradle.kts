@@ -55,6 +55,11 @@ android {
   testOptions {
     unitTests {
       isIncludeAndroidResources = true
+      // Le runtime natif de Robolectric ne se charge pas si le chemin contient un espace (%20)
+      all {
+        it.systemProperty("robolectric.sqliteMode", "LEGACY")
+        it.systemProperty("robolectric.graphicsMode", "LEGACY")
+      }
     }
   }
 
